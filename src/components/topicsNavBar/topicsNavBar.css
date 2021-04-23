@@ -1,0 +1,21 @@
+.topics-container {
+  width: 100vw;
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 750px;
+}
+
+.topics-container a {
+  color: black;
+  text-decoration: none;
+  padding: 1.5rem;
+}
+
+@media (min-width: 550px) {
+  .topics-container {
+    justify-content: space-around;
+  }
+}
