@@ -6,8 +6,8 @@ const TopicsNavBar = () => {
   return (
     <div className="topics-container">
       <Link to="/market">MARKET</Link>
-      <Link to="#">SUBREDDITS</Link>
-      <Link to="#">NEWS</Link>
+      <Link to="/subreddits">SUBREDDITS</Link>
+      <Link to="/news">NEWS</Link>
     </div>
   );
 };
