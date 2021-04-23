@@ -1,11 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Header from "./components/header/header/Header";
 
 const App = () => {
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <Fragment>
+      <BrowserRouter>
+        <Header />
+        <Route exact path="/" component={HomePage} />
+      </BrowserRouter>
+    </Fragment>
   );
 };
 
