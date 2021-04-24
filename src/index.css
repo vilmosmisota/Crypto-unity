@@ -15,6 +15,7 @@ body {
   background-color: var(--light-gray);
   box-sizing: border-box;
   line-height: 1.6rem;
+  overflow-x: hidden;
 }
 
 code {

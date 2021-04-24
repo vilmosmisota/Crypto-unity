@@ -12,8 +12,8 @@ export const getMarketData = () => async (dispatch) => {
       type: MARKET_DATA_LOADING,
     });
 
-    const newLocal = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=20&page=1&sparkline=false`;
-    const res = await axios.get(newLocal);
+    const MarketDataAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h%2C7d%2C200d`;
+    const res = await axios.get(MarketDataAPI);
 
     dispatch({
       type: MARKET_DATA_SUCCESS,
