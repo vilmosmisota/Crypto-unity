@@ -1,0 +1,78 @@
+.empty-data-container {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.empty-data-container p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.subreddits {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.subreddits button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.show-posts-container {
+  width: 80vw;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--off-white);
+  box-shadow: 2px 2px 5px #888888;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-posts-container h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.posts-img-container {
+  width: 200px;
+}
+
+.posts-img-container img {
+  display: block;
+  width: 100%;
+}
+
+.posts-selftext {
+  position: relative;
+  width: 80vw;
+  max-width: 500px;
+  height: 150px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.posts-info-section {
+  width: 80vw;
+  max-width: 500px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.posts-info-section p {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
