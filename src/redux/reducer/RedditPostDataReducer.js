@@ -1,25 +1,25 @@
 import {
-  MARKET_DATA_LOADING,
-  MARKET_DATA_SUCCESS,
-  MARKET_DATA_FAIL,
+  REDDITPOST_DATA_LOADING,
+  REDDITPOST_DATA_SUCCESS,
+  REDDITPOST_DATA_FAIL,
 } from "../actions/types";
 
 const DefaultState = {
   loading: false,
-  data: [],
+  data: {},
   errorMsg: "",
 };
 
-const MarketDataReducer = (state = DefaultState, action) => {
+const RedditPostDataReducer = (state = DefaultState, action) => {
   switch (action.type) {
-    case MARKET_DATA_LOADING:
+    case REDDITPOST_DATA_LOADING:
       return {
         ...state,
         loading: true,
         errorMsg: "",
       };
 
-    case MARKET_DATA_SUCCESS:
+    case REDDITPOST_DATA_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -27,7 +27,7 @@ const MarketDataReducer = (state = DefaultState, action) => {
         errorMsg: "",
       };
 
-    case MARKET_DATA_FAIL:
+    case REDDITPOST_DATA_FAIL:
       return {
         ...state,
         loading: false,
@@ -39,4 +39,4 @@ const MarketDataReducer = (state = DefaultState, action) => {
   }
 };
 
-export default MarketDataReducer;
+export default RedditPostDataReducer;

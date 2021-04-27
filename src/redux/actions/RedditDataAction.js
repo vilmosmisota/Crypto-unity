@@ -12,9 +12,9 @@ export const getRedditData = (page) => async (dispatch) => {
       type: REDDIT_DATA_LOADING,
     });
 
-    const subreddit = page;
+    const reddit = page;
 
-    const redditApi = `https://www.reddit.com/r/${subreddit}.json`;
+    const redditApi = `https://www.reddit.com/r/${reddit}.json`;
     const res = await axios.get(redditApi);
 
     dispatch({

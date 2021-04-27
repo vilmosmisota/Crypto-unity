@@ -3,6 +3,7 @@
   --off-white: #f5f5f5;
   --orange: #efc9a5;
   --green: #bccbc8;
+  --red: #af5010;
 }
 
 body {
@@ -21,4 +22,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }

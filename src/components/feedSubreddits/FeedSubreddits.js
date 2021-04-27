@@ -5,6 +5,8 @@ import _ from "lodash";
 import moment from "moment";
 import { getRedditData } from "../../redux/actions/RedditDataAction";
 import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
+import { Fragment } from "react";
 
 const FeedSubreddits = () => {
   const page = {
@@ -16,45 +18,46 @@ const FeedSubreddits = () => {
   const dispatch = useDispatch();
   const reddit = useSelector((state) => state.RedditData);
 
-  console.log(reddit);
-
   const ShowData = () => {
+    if (reddit.loading) {
+      return <p>Loading...</p>;
+    }
+
     if (!_.isEmpty(reddit.data)) {
       return reddit.data.map((el) => {
         return (
-          <article className="show-posts-container" key={el.data.id}>
-            {/* <Link to={`/post/${el.data.subreddit}/${el.data.id}`}> */}
-            <h2>{el.data.title}</h2>
-            {/* </Link> */}
-            <div className="posts-img-container">
-              <img src={el.data.url} alt="" className="posts-img" />
-            </div>
-            <div className="posts-selftext">
-              <ReactMarkdown source={el.data.selftext} />
-            </div>
+          <Fragment>
+            <Link to={`/reddit/post/${el.data.subreddit}/${el.data.id}`}>
+              <article className="show-posts-container" key={el.data.id}>
+                <h2>{el.data.title}</h2>
 
-            <div className="posts-info-section">
-              <div>
-                <p>Posted by:</p>
-                <p>{el.data.author}</p>
-              </div>
-              <div>
-                <p>Comments:</p>
-                <p>{el.data.num_comments}</p>
-              </div>
-              <div>
-                <p className="posts-time">
-                  {moment.unix(el.data.created_utc).fromNow()}
-                </p>
-              </div>
-            </div>
-          </article>
+                <div className="posts-img-container">
+                  <img src={el.data.url} alt="" className="posts-img" />
+                </div>
+                <div className="posts-selftext">
+                  <ReactMarkdown source={el.data.selftext} />
+                </div>
+
+                <div className="posts-info-section">
+                  <div>
+                    <p>Posted by:</p>
+                    <p>{el.data.author}</p>
+                  </div>
+                  <div>
+                    <p>Comments:</p>
+                    <p>{el.data.num_comments}</p>
+                  </div>
+                  <div>
+                    <p className="posts-time">
+                      {moment.unix(el.data.created_utc).fromNow()}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </Link>
+          </Fragment>
         );
       });
-    }
-
-    if (reddit.loading) {
-      return <p>Loading...</p>;
     }
 
     if (reddit.errorMsg !== "") {
@@ -81,6 +84,7 @@ const FeedSubreddits = () => {
           Litecoin
         </button>
       </div>
+
       <ShowData />
     </div>
   );

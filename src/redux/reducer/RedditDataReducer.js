@@ -22,7 +22,7 @@ const RedditDataReducer = (state = DefaultState, action) => {
     case REDDIT_DATA_SUCCESS:
       return {
         ...state,
-        loading: true,
+        loading: false,
         data: action.payload,
         errorMsg: "",
       };
