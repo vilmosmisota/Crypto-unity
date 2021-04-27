@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./feedSubredditPost.css";
 import _ from "lodash";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { getRedditPostData } from "../../redux/actions/RedditPostDataActions";
 import ReactMarkdown from "react-markdown";
 import moment from "moment";
