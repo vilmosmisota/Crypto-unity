@@ -4,6 +4,7 @@ import _ from "lodash";
 import { getMarketData } from "../../redux/actions/MarketDataActions";
 
 import "./feedMarket.css";
+import LoaderIcon from "../loaderIcon/LoaderIcon";
 
 const FeedMarket = () => {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const FeedMarket = () => {
       });
     }
     if (market.loading) {
-      return <p>Loading...</p>;
+      return <LoaderIcon />;
     }
 
     if (market.errorMsg !== "") {

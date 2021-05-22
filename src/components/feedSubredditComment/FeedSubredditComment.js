@@ -5,6 +5,7 @@ import moment from "moment";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { getCommentData } from "../../redux/actions/RedditCommentDataActions";
+import LoaderIcon from "../loaderIcon/LoaderIcon";
 
 const FeedSubredditComment = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ const FeedSubredditComment = () => {
     }
 
     if (redditComment.loading) {
-      return <p>Loading...</p>;
+      return <LoaderIcon />;
     }
 
     if (redditComment.errorMsg !== "") {

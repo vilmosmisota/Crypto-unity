@@ -7,6 +7,7 @@ import { getRedditData } from "../../redux/actions/RedditDataAction";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
+import LoaderIcon from "../loaderIcon/LoaderIcon";
 
 const FeedSubreddits = () => {
   const page = {
@@ -20,7 +21,7 @@ const FeedSubreddits = () => {
 
   const ShowData = () => {
     if (reddit.loading) {
-      return <p>Loading...</p>;
+      return <LoaderIcon />;
     }
 
     if (!_.isEmpty(reddit.data)) {

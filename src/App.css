@@ -2,11 +2,23 @@
   width: 100vw;
   max-width: 750px;
   margin: 0 auto;
+  opacity: 0;
+  animation: loading-homepage 0.2s ease-in 0.5s;
+  animation-fill-mode: forwards;
 }
 
 @media (min-width: 750px) {
   .home-page-container {
     margin-top: 4rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes loading-homepage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
