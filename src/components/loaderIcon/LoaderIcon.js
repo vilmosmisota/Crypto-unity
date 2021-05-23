@@ -4,7 +4,7 @@ import "./loaderIcon.css";
 function LoaderIcon() {
   return (
     <div className="loader-icon-wrapper">
-      <i class="fas fa-spinner fa-spin"></i>
+      <i className="fas fa-spinner fa-spin"></i>
     </div>
   );
 }

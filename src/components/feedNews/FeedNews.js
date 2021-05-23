@@ -13,10 +13,6 @@ const FeedNews = () => {
   console.log(news);
   console.log(process.env);
 
-  // const page = {
-  //   bitcoin: "bitcoin",
-  // };
-
   useEffect(() => {
     dispatch(getNewsData());
   }, [dispatch]);
@@ -30,7 +26,7 @@ const FeedNews = () => {
               <article className="show-posts-container" key={uuidv4()}>
                 <h2>{el.title}</h2>
                 <div className="posts-img-container">
-                  <img src={el.urlToImage} alt="" className="posts-img" />
+                  <img src={el.image} alt="" className="posts-img" />
                 </div>
                 <div className="post-selftext">
                   <p>{el.content}</p>
