@@ -61,7 +61,7 @@ Add search bar
 
 ## Skills developed/improved
 
-My most important takeaway from this project is connecting react with redux. Definitely learnt a lot. 
+My most important takeaway from this project is connecting redux with react . I have definitely learnt a lot. 
 
 
 
